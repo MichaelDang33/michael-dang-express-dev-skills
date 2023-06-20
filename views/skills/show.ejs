@@ -1,0 +1,16 @@
+<%- include("../partials/header") %>
+
+<h1>Current Skill Page: "<%= skills.skill %>"</h1>
+<h3><u>Skill:</h3></u>
+<p><%= skills.skill %></p>
+<h3><u>Current Skill Status: </h3></u><p><%= skills.done ? "Understanding" : "Needs Work" %></p>
+<br>
+<a href="/skills/<%= skills.id %>/edit">EDIT SKILL?</a>
+
+<form action="/skills/<%= skills.id %>?_method=DELETE"
+    method="POST">
+    <br>
+    <button type="submit">Delete the skill?</button>
+</form>
+
+<%- include("../partials/footer") %>
